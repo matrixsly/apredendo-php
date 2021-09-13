@@ -1,32 +1,21 @@
 <?php
- $nome = 'alex';
 
- $idade = 17;
+$idade = 18;
+$numeroDePessoas = 2;
 
- $acompalhado = 1;
-
-$pula_linha = PHP_EOL;
-
-$tipo_dados = gettype($idade);
-
-echo ('voce so pode entra ser for maio que 17 anos');
-
-echo $pula_linha;
+echo "Você só pode entrar se tiver a partir de 18 anos ou ";
+echo "a partir de 16 anos acompanhado" . PHP_EOL;
 
 if ($idade >= 18) {
-    # code...
-    echo "voce e maior que 17 anos pode entra" ;
-}
- 
-else if ($acompalhado>=1) {
-    # code...
-    echo 'pode entra';
+    echo "Você tem $idade anos. Pode entrar sozinho.";
+} elseif ($idade >= 16 && $numeroDePessoas > 1) {
+    echo "Você tem $idade anos, está acompanhado(a), então pode entrar.";
+} else {
+    echo "Você só tem $idade anos. Você não pode entrar.";
 }
 
-else {
-    echo "nao pode entra"; 
-}
-
+echo PHP_EOL;
+echo "Adeus!";
  
 
  
